@@ -9,7 +9,7 @@ fn main() {
         println!("Please input your guess:");
         let mut guess = String::new();
         io::stdin().read_line(&mut guess).expect("Fail");
-        let guess: u32 = guess.trim().parse().expect("Fail");
+        let guess: i32 = guess.trim().parse().expect("Fail");
         if guess == secret_number {
             println!("You Win!");
             break;
