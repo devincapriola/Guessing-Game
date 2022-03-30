@@ -4,12 +4,12 @@ use std::io;
 
 fn main() {
     println!("Guess the number (1 to 100)");
-    let secret_number = rand::thread_rng().gen_range(1, 100);
+    let secret_number = rand::thread_rng().gen_range(1, 101);
     loop {
         println!("Please input your guess:");
         let mut guess = String::new();
         io::stdin().read_line(&mut guess).expect("Fail");
-        let guess: i32 = guess.trim().parse().expect("Fail");
+        let guess: u32 = guess.trim().parse().expect("Fail");
         if guess == secret_number {
             println!("You Win!");
             break;
